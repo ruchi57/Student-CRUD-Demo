@@ -3,8 +3,8 @@ import { ADD_STUDENT, REMOVE_STUDENT, EDIT_STUDENT } from "../constants/action-t
 
 const initialState = {
   students: [
-    { Email: "Ruchi@gmail.com", Gender: "Female", Country: "India", Hobby: [" Travel, Dance "], Password: "123", ReTypePassword: "123" },
-    { Email: "Maya@gmail.com", Gender: "Female", Country: "India", Hobby: [" Dance, Travel "], Password: "123", ReTypePassword: "123" },
+    { Email: "Ruchi@gmail.com", Gender: "Female", Country: "India", Hobby: [" Travel ", " Dance "], Password: "123", ReTypePassword: "123" },
+    { Email: "Maya@gmail.com", Gender: "Female", Country: "India", Hobby: [" Dance ", " Travel "], Password: "123", ReTypePassword: "123" },
   ]
 };
 
@@ -28,13 +28,9 @@ function rootReducer(state = initialState, action) {
 
     case EDIT_STUDENT: {
       var student = state.students;
-
       var studentNew = action.payload[0];
-
       var index = action.payload[1];
-
       student[index] = studentNew;
-
       return Object.assign({}, state, {
         students: student
       });
