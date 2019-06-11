@@ -1,6 +1,5 @@
 import { ADD_STUDENT, REMOVE_STUDENT, EDIT_STUDENT } from "../constants/action-types";
 
-
 const initialState = {
   students: [
     { Email: "Ruchi@gmail.com", Gender: "Female", Country: "India", Hobby: [" Travel ", " Dance "], Password: "123", ReTypePassword: "123" },
