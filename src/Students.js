@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addStudent, removeStudent, editStudent } from './actions/RootAction'
+import Reactfrom 'react';
 import { SelectionState } from '@devexpress/dx-react-grid';
 import {
   Grid,
@@ -168,6 +166,7 @@ class Student extends React.Component {
   }
 
   handleForm = (value) => {
+    this.setState({ editForm: false });
     this.setState({ email: '', gender: '', country: '', hobbies: '', password: '', rePassword: '' })
     this.setState({ showForm: value });
   }
@@ -403,17 +402,4 @@ class Student extends React.Component {
   }
 }
 
-//Container and Connect
-const mapStateToProps = state => {
-  return {
-    students: state.students
-  };
-}
-
-const mapDispatchToProps = { 
-  addStudent,
-  removeStudent,
-  editStudent
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Student);
+export default Student;
