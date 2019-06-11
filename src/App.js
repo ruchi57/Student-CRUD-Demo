@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Student from './Students';
+import Student from './StudentContainer';
 
-const App = () => ( 
-    <Student/>
+const App = () => (
+    <Student />
 )
 
 export default App;
